@@ -1,4 +1,4 @@
-package com.mobydigital.Test.Backend.Developer;
+package com.mobydigital.backend.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
