@@ -1,5 +1,5 @@
-package com.mobydigital.backend.test.model.views;
-import com.mobydigital.backend.test.model.entities.Experiencia;
+package com.mobydigital.model.views;
+import com.mobydigital.model.entities.Experiencia;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

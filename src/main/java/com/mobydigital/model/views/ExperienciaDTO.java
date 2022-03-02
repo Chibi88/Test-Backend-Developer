@@ -1,7 +1,7 @@
-package com.mobydigital.backend.test.model.views;
+package com.mobydigital.model.views;
 
-import com.mobydigital.backend.test.model.entities.Candidato;
-import com.mobydigital.backend.test.model.entities.Tecnologia;
+import com.mobydigital.model.entities.Candidato;
+import com.mobydigital.model.entities.Tecnologia;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.mobydigital.backend.test;
+package com.mobydigital;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.mobydigital.backend.test.model.entities;
+package com.mobydigital.model.entities;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

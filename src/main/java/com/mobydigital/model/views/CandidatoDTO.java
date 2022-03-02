@@ -1,6 +1,6 @@
-package com.mobydigital.backend.test.model.views;
+package com.mobydigital.model.views;
 
-import com.mobydigital.backend.test.model.entities.TipoDeDocumento;
+import com.mobydigital.model.entities.TipoDeDocumento;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
