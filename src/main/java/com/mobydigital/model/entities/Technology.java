@@ -19,19 +19,19 @@ import javax.persistence.Table;
 @ToString
 @RequiredArgsConstructor
 
-public class Tecnologia {
+public class Technology {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    private String nombre;
+    private String name;
     private String version;
 
-    @OneToMany(mappedBy = "tecnologia") //agregar cascade
+    @OneToMany(mappedBy = "technology") //agregar cascade
     @JsonIgnore
     @ToString.Exclude
-    private Experiencia experiencia;
+    private Experience experience;
 
 
 }

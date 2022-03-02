@@ -1,10 +1,8 @@
 package com.mobydigital.model.entities;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,9 +15,8 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @ToString
-@EqualsAndHashCode
 
-public class Experiencia {
+public class Experience {
 
     @Id
     @GeneratedValue
@@ -27,12 +24,12 @@ public class Experiencia {
 
     @ManyToOne
     @JoinColumn(name = "tecnologia_id", nullable = false)
-    private Tecnologia tecnologia;
+    private Technology technology;
 
     @ManyToOne
     @JoinColumn(name = "candidato_id", nullable = false)
-    private Candidato candidato;
+    private Candidate candidate;
 
-    private Integer experience;
+    private Integer experienceYears;
 
 }

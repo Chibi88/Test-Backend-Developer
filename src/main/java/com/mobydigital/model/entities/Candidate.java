@@ -1,9 +1,9 @@
 package com.mobydigital.model.entities;
 
+import com.mobydigital.model.enums.IdType;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,20 +17,20 @@ import java.util.Date;
 @Setter
 @ToString
 
-public class Candidato {
+public class Candidate {
 
     @Id
     @GeneratedValue
     private Long id;
-    private String nombre;
-    private String apellido;
-    private TipoDeDocumento tipoDeDocumento;
-    private String numeroDocumento;
-    private Date fechaNacimiento;
+    private String name;
+    private String lastName;
+    private IdType idType;
+    private String idNumber;
+    private Date birthDate;
 
-    @OneToMany (mappedBy = "candidato")
+    @OneToMany (mappedBy = "candidate")
     @ToString.Exclude
-    private Experiencia experiencia;
+    private Experience experience;
 
 
 
