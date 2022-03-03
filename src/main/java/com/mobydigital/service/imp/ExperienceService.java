@@ -1,6 +1,7 @@
 package com.mobydigital.service.imp;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mobydigital.exception.ExperienceNotFoundException;
 import com.mobydigital.model.entities.Experience;
 import com.mobydigital.model.views.ExperienceDTO;
 import com.mobydigital.repository.IExperienceRepository;
@@ -28,12 +29,12 @@ public class ExperienceService implements IExperienceService {
 
     @Override
     @Transactional(readOnly = true)
-    public ExperienceDTO readExperience(Long id) throws Exception {
+    public ExperienceDTO readExperience(Long id) throws ExperienceNotFoundException {
         Optional<Experience> found = experienceRepository.findById(id);
         if(found.isPresent())
             return mapper.convertValue(found, ExperienceDTO.class);
         else
-            throw new Exception("Experiencia no encontrada"); //revisar
+            throw new ExperienceNotFoundException("Experiencia no encontrada"); //revisar
     }
 
     @Override

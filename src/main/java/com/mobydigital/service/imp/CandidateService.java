@@ -1,6 +1,7 @@
 package com.mobydigital.service.imp;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mobydigital.exception.CandidateNotFoundException;
 import com.mobydigital.model.entities.Candidate;
 import com.mobydigital.model.views.CandidateDTO;
 import com.mobydigital.model.views.ExperienceDTO;
@@ -30,13 +31,13 @@ public class CandidateService implements ICandidateService {
 
     @Override
     @Transactional(readOnly = true)
-    public CandidateDTO readCandidate(Long id) throws Exception {
+    public CandidateDTO readCandidate(Long id) throws CandidateNotFoundException {
 
         Optional<Candidate> found = candidateRepository.findById(id);
         if(found.isPresent())
             return mapper.convertValue(found, CandidateDTO.class);
         else
-            throw new Exception("Candidato no encontrado");
+            throw new CandidateNotFoundException("Candidato no encontrado");
     }
 
     @Override

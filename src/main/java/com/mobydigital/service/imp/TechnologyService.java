@@ -1,6 +1,7 @@
 package com.mobydigital.service.imp;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mobydigital.exception.TechnologyNotFoundException;
 import com.mobydigital.model.entities.Technology;
 import com.mobydigital.model.views.TechnologyDTO;
 import com.mobydigital.repository.ITechnologyRepository;
@@ -28,12 +29,12 @@ public class TechnologyService implements ITechnologyService {
 
     @Override
     @Transactional(readOnly = true)
-    public TechnologyDTO readTechnology(Long id) throws Exception {
+    public TechnologyDTO readTechnology(Long id) throws TechnologyNotFoundException {
         Optional<Technology> found = technologyRepository.findById(id);
         if(found.isPresent()) {
             return mapper.convertValue(found, TechnologyDTO.class);
         }else {
-            throw new Exception("Tecnología no encontrada no encontrado");
+            throw new TechnologyNotFoundException("Tecnología no encontrada no encontrado");
         }
     }
 
@@ -41,7 +42,7 @@ public class TechnologyService implements ITechnologyService {
     @Transactional
     public void updateTechnology(TechnologyDTO technologyDTO) {
 
-        if(technologyRepository.findById(technologyDTO.getId())!= null){
+        if(technologyRepository.findById(technologyDTO.getId()).isPresent()){
             Technology technology = mapper.convertValue(technologyDTO, Technology.class);
             technologyRepository.save(technology);
         }
