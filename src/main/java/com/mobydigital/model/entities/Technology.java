@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.Set;
 
 
 @Entity
@@ -31,7 +32,7 @@ public class Technology {
     @OneToMany(mappedBy = "technology") //agregar cascade
     @JsonIgnore
     @ToString.Exclude
-    private Experience experience;
+    private Set<Experience> experience;
 
 
 }
