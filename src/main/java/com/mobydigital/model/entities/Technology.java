@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 import java.util.Set;
 
 
@@ -26,6 +27,7 @@ public class Technology {
     @GeneratedValue
     private Long id;
 
+    @NotEmpty(message = "Ingresar tecnología")
     private String name;
     private String version;
 

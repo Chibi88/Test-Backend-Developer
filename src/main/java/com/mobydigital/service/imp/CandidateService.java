@@ -23,9 +23,9 @@ public class CandidateService implements ICandidateService {
     ObjectMapper mapper;
 
     @Override
-    public void createCandidate(Candidate candidate) {
+    public void createCandidate(Candidate candidate){
 
-        candidateRepository.save(candidate);
+       candidateRepository.save(candidate);
     }
 
     @Override
@@ -61,7 +61,6 @@ public class CandidateService implements ICandidateService {
 
         return null;
     }
-
 
 
 }

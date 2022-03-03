@@ -13,6 +13,4 @@ public enum IdType {
         this.string = string;
     }
 
-    // public String getType(){return string;}  ver si despues se usa, sino sacarlo
-
 }

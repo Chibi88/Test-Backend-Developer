@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping ("/technology")
 public class TechnologyController {
@@ -27,7 +29,7 @@ public class TechnologyController {
     ITechnologyService technologyService;
 
     @PostMapping("/add")
-    public ResponseEntity<?> addTechnology(@RequestBody Technology technology) {
+    public ResponseEntity<?> addTechnology(@RequestBody @Valid Technology technology) {
         technologyService.createTechnology(technology);
         logger.debug("Tecnología agregada");
         return ResponseEntity.ok(HttpStatus.OK);
@@ -40,7 +42,7 @@ public class TechnologyController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Technology> updateTechnology(@RequestBody Technology technology) {
+    public ResponseEntity<Technology> updateTechnology(@RequestBody @Valid Technology technology) {
         ResponseEntity<Technology> response = null;
 
         if (technology.getId() != null){

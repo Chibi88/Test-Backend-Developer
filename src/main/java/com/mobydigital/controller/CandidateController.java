@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -28,7 +30,7 @@ public class CandidateController {
     ICandidateService candidateService;
 
     @PostMapping("/add")
-    public ResponseEntity<Candidate> addCandidate(@RequestBody Candidate candidate) {
+    public ResponseEntity<Candidate> addCandidate(@RequestBody @Valid Candidate candidate){
         candidateService.createCandidate(candidate);
         logger.debug("Registrando un candidato nuevo");
         return new ResponseEntity<>(HttpStatus.CREATED);
@@ -41,7 +43,7 @@ public class CandidateController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<CandidateDTO> updateCandidate(@RequestBody CandidateDTO candidateDTO) {
+    public ResponseEntity<CandidateDTO> updateCandidate(@RequestBody @Valid CandidateDTO candidateDTO) {
         ResponseEntity<CandidateDTO> response = null;
 
         if (candidateDTO.getId() != null){
