@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping ("/Tecnologías")
+@RequestMapping ("/technology")
 public class TechnologyController {
 
     private Logger logger = Logger.getLogger("logs Tecnologías");
@@ -26,7 +26,7 @@ public class TechnologyController {
     @Autowired
     ITechnologyService technologyService;
 
-    @PostMapping()
+    @PostMapping("/add")
     public ResponseEntity<?> addTechnology(@RequestBody Technology technology) {
         technologyService.createTechnology(technology);
         logger.debug("Tecnología agregada");
@@ -39,7 +39,7 @@ public class TechnologyController {
         return technologyService.readTechnology(id);
     }
 
-    @PutMapping()
+    @PutMapping("/update")
     public ResponseEntity<Technology> updateTechnology(@RequestBody Technology technology) {
         ResponseEntity<Technology> response = null;
 
@@ -52,7 +52,7 @@ public class TechnologyController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> removeTechnology(@PathVariable Long id) {
 
         ResponseEntity<String> response = null;

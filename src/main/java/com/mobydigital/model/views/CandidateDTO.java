@@ -19,6 +19,5 @@ public class CandidateDTO implements Serializable {
     private IdType idType;
     private String idNumber;
     private Date birthDate;
-    private Experience experience;
 
 }

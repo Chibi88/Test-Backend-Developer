@@ -17,18 +17,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Optional;
 
 @RestController
-@RequestMapping("/experiencia")
+@RequestMapping("/experience")
 public class ExperienceController {
 
-    private final static Logger logger = Logger.getLogger("Logs experiencia");
+    private static final Logger logger = Logger.getLogger("Logs experiencia");
 
     @Autowired
     IExperienceService experienceService;
 
-    @PostMapping()
+    @PostMapping("/add")
     public ResponseEntity<?> createExperience(@RequestBody Experience experience) {
         experienceService.createExperience(experience);
         logger.debug("Experiencia cargada");
@@ -36,23 +35,23 @@ public class ExperienceController {
     }
     @GetMapping("/{id}")
     public ExperienceDTO readExperience(@PathVariable Long id) throws Exception {
-        logger.info("Consultando experiencia");
+        logger.debug("Consultando experiencia");
         return experienceService.readExperience(id);
     }
 
-    @PutMapping()
-    public ResponseEntity<Experience> updateExperience(@RequestBody Experience experience) {
+    @PutMapping("/update")
+    public ResponseEntity<ExperienceDTO> updateExperience(@RequestBody ExperienceDTO experience) {
         ResponseEntity<Experience> response = null;
         if (experience.getId() != null) {
             logger.debug("Modificando experiencia");
-            experienceService.createExperience(experience);
+            experienceService.updateExperience(experience);
             return ResponseEntity.ok(experience);
         }
         logger.error("Falló la petición o experiencia no existe");
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> removeExperience(@PathVariable Long id) {
 
         ResponseEntity<String> response = null;

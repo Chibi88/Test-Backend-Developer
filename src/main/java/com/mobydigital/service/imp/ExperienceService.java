@@ -27,6 +27,7 @@ public class ExperienceService implements IExperienceService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public ExperienceDTO readExperience(Long id) throws Exception {
         Optional<Experience> found = experienceRepository.findById(id);
         if(found.isPresent())

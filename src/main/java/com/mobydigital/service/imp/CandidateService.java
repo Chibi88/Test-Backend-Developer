@@ -3,12 +3,14 @@ package com.mobydigital.service.imp;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mobydigital.model.entities.Candidate;
 import com.mobydigital.model.views.CandidateDTO;
+import com.mobydigital.model.views.ExperienceDTO;
 import com.mobydigital.repository.ICandidateRepository;
 import com.mobydigital.service.ICandidateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -53,4 +55,13 @@ public class CandidateService implements ICandidateService {
         candidateRepository.deleteById(id);
 
     }
+
+    @Override
+    public List<ExperienceDTO> getExperienceByTechnology() {
+
+        return null;
+    }
+
+
+
 }

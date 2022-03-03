@@ -29,10 +29,5 @@ public class Technology {
     private String name;
     private String version;
 
-    @OneToMany(mappedBy = "technology") //agregar cascade
-    @JsonIgnore
-    @ToString.Exclude
-    private Set<Experience> experience;
-
 
 }

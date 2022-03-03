@@ -2,6 +2,7 @@ package com.mobydigital.controller;
 
 import com.mobydigital.model.entities.Candidate;
 import com.mobydigital.model.views.CandidateDTO;
+import com.mobydigital.model.views.ExperienceDTO;
 import com.mobydigital.service.ICandidateService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,43 +16,44 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
 
 @RestController
-@RequestMapping("/candidatos")
+@RequestMapping("/candidates")
 public class CandidateController {
 
-    private Logger logger = Logger.getLogger("Logueos");
+    private final Logger logger = Logger.getLogger("Logueos");
 
     @Autowired
     ICandidateService candidateService;
 
-    @PostMapping()
-    public ResponseEntity<?> addCandidate(@RequestBody Candidate candidate) {
+    @PostMapping("/add")
+    public ResponseEntity<Candidate> addCandidate(@RequestBody Candidate candidate) {
         candidateService.createCandidate(candidate);
-        logger.info("Registrando un candidato nuevo");
-        return ResponseEntity.ok(HttpStatus.OK);
+        logger.debug("Registrando un candidato nuevo");
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
     public CandidateDTO getCandidate(@PathVariable Long id) throws Exception {
-        logger.debug("Consultando candidato existente");
+        logger.info("Consultando candidato existente");
         return candidateService.readCandidate(id);
     }
 
-    @PutMapping()
-    public ResponseEntity<Candidate> updateCandidate(@RequestBody Candidate candidate) {
-        ResponseEntity<Candidate> response = null;
+    @PutMapping("/update")
+    public ResponseEntity<CandidateDTO> updateCandidate(@RequestBody CandidateDTO candidateDTO) {
+        ResponseEntity<CandidateDTO> response = null;
 
-        if (candidate.getId() != null){
+        if (candidateDTO.getId() != null){
             logger.debug("Modificando candidato existente");
-            candidateService.createCandidate(candidate);
-            return ResponseEntity.ok(candidate);
+            candidateService.updateCandidate(candidateDTO);
+            return ResponseEntity.ok(candidateDTO);
         }
         logger.error("Falló la petición o el candidato no existe");
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> removeCandidate(@PathVariable Long id) {
 
         ResponseEntity<String> response = null;
@@ -60,5 +62,11 @@ public class CandidateController {
         response = ResponseEntity.status(HttpStatus.OK).body("Eliminado");
         return response;
     }
+
+    //@GetMapping(value = "/candidateExperienceList/{Technology}")
+    //public ResponseEntity<List<ExperienceDTO>> candidateExperienceList(@PathVariable String technologyName){
+    //    return new ResponseEntity<>(candidateService.getExperienceByTechnology(technologyName), HttpStatus.OK);
+    //}
+
 
 }
