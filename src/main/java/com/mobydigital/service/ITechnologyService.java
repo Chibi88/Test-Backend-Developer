@@ -8,6 +8,6 @@ public interface ITechnologyService {
     void createTechnology(Technology technology);
     TechnologyDTO readTechnology(Long id) throws Exception;
     void updateTechnology(TechnologyDTO technologyDTO);
-    void deleteCandidate(Long id);
+    void deleteTechnology(Long id);
 
 }
