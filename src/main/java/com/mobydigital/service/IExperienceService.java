@@ -1,9 +1,10 @@
 package com.mobydigital.service;
 
 import com.mobydigital.model.entities.Experience;
-import com.mobydigital.model.entities.Technology;
 import com.mobydigital.model.views.ExperienceDTO;
-import com.mobydigital.model.views.TechnologyDTO;
+
+
+import java.util.Set;
 
 public interface IExperienceService {
 
@@ -11,5 +12,6 @@ public interface IExperienceService {
     ExperienceDTO readExperience(Long id) throws Exception;
     void updateExperience(ExperienceDTO experienceDTO);
     void deleteExperience(Long id);
+    Set<ExperienceDTO> getCandidatesByTechnology(String technology);
 
 }
