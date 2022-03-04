@@ -57,11 +57,4 @@ public class CandidateService implements ICandidateService {
 
     }
 
-    @Override
-    public List<ExperienceDTO> getExperienceByTechnology() {
-
-        return null;
-    }
-
-
 }

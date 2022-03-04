@@ -38,7 +38,7 @@ public class ExperienceService implements IExperienceService {
         if(found.isPresent())
             return mapper.convertValue(found, ExperienceDTO.class);
         else
-            throw new ExperienceNotFoundException("Experiencia no encontrada"); //revisar
+            throw new ExperienceNotFoundException("Experiencia no encontrada");
     }
 
     @Override
