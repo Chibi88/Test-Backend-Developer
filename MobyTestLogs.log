@@ -1,0 +1,23 @@
+[2022-03-0400:54:03] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0400:54:42] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0400:55:45] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0400:56:04] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0400:56:04] [ ERROR] [GlobalExceptionHandler:20] Candidato no encontrado
+[2022-03-0400:56:18] [ DEBUG] [logs Tecnologías:40] Consultando tecnología existente
+[2022-03-0400:56:24] [ DEBUG] [logs Tecnologías:40] Consultando tecnología existente
+[2022-03-0400:56:24] [ ERROR] [GlobalExceptionHandler:20] Tecnología no encontrada no encontrado
+[2022-03-0400:57:35] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0400:57:38] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0400:57:38] [ ERROR] [GlobalExceptionHandler:20] Experiencia no encontrada
+[2022-03-0400:58:00] [ DEBUG] [Logueos:35] Registrando un candidato nuevo
+[2022-03-0400:58:07] [ DEBUG] [logs Tecnologías:34] Tecnología agregada
+[2022-03-0409:11:30] [ DEBUG] [Logueos:35] Registrando un candidato nuevo
+[2022-03-0409:43:39] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0409:53:47] [ DEBUG] [Logueos:35] Registrando un candidato nuevo
+[2022-03-0409:55:40] [ DEBUG] [Logueos:35] Registrando un candidato nuevo
+[2022-03-0409:57:27] [ DEBUG] [Logueos:35] Registrando un candidato nuevo
+[2022-03-0409:59:32] [ DEBUG] [Logueos:35] Registrando un candidato nuevo
+[2022-03-0410:02:15] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0410:02:20] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0410:03:17] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0410:03:17] [ ERROR] [GlobalExceptionHandler:20] Candidato no encontrado

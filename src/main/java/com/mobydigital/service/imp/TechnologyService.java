@@ -34,7 +34,7 @@ public class TechnologyService implements ITechnologyService {
         if(found.isPresent()) {
             return mapper.convertValue(found, TechnologyDTO.class);
         }else {
-            throw new TechnologyNotFoundException("Tecnología no encontrada no encontrado");
+            throw new TechnologyNotFoundException("Tecnología no encontrada");
         }
     }
 
