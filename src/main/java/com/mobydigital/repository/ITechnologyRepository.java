@@ -7,6 +7,5 @@ public interface ITechnologyRepository extends JpaRepository<Technology, Long> {
 
     // boolean technologyAlreadyExists(String technology);
 
-    //buscar por tecnologia
 
 }

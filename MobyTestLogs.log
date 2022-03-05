@@ -21,3 +21,78 @@
 [2022-03-0410:02:20] [ INFO ] [Logueos:41] Consultando candidato existente
 [2022-03-0410:03:17] [ INFO ] [Logueos:41] Consultando candidato existente
 [2022-03-0410:03:17] [ ERROR] [GlobalExceptionHandler:20] Candidato no encontrado
+[2022-03-0418:43:21] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0418:43:41] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0418:46:24] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0418:46:24] [ ERROR] [GlobalExceptionHandler:20] Unrecognized field "empty" (class com.mobydigital.model.views.CandidateDTO), not marked as ignorable (6 known properties: "lastName", "idNumber", "idType", "id", "birthDate", "name"])
+ at [Source: UNKNOWN; line: -1, column: -1] (through reference chain: com.mobydigital.model.views.CandidateDTO["empty"])
+[2022-03-0418:50:54] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0418:50:54] [ ERROR] [GlobalExceptionHandler:20] Cannot construct instance of `com.mobydigital.model.views.CandidateDTO` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: UNKNOWN; line: -1, column: -1]
+[2022-03-0418:55:44] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0418:55:45] [ ERROR] [GlobalExceptionHandler:20] Cannot construct instance of `com.mobydigital.model.views.CandidateDTO` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: UNKNOWN; line: -1, column: -1]
+[2022-03-0419:04:29] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0419:08:18] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0419:11:57] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0419:12:04] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0419:33:27] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0419:33:46] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0419:34:16] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0420:19:02] [ INFO ] [Logueos:41] Consultando candidato existente
+[2022-03-0420:19:13] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0420:19:13] [ ERROR] [GlobalExceptionHandler:20] Experiencia no encontrada
+[2022-03-0420:19:20] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0420:20:06] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0420:22:14] [ DEBUG] [logs Tecnologías:40] Consultando tecnología existente
+[2022-03-0420:22:21] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0420:22:21] [ ERROR] [GlobalExceptionHandler:20] No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.mobydigital.model.entities.Experience["candidate"]->com.mobydigital.model.entities.Candidate$HibernateProxy$nlt2KCE0["hibernateLazyInitializer"])
+[2022-03-0420:23:16] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0420:23:51] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0420:23:51] [ ERROR] [GlobalExceptionHandler:20] No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.mobydigital.model.entities.Experience["candidate"]->com.mobydigital.model.entities.Candidate$HibernateProxy$bd8eEEje["hibernateLazyInitializer"])
+[2022-03-0420:40:46] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0420:40:53] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0420:42:44] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0420:42:47] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0420:42:50] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0420:42:52] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0420:43:01] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0420:43:09] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0421:10:39] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0421:11:30] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0421:26:23] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0421:26:26] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0421:26:28] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0421:27:45] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0422:43:27] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0422:43:27] [ ERROR] [GlobalExceptionHandler:20] could not execute query; SQL [SELECT  tecnologia.NAME, candidatos.NAME, candidatos.LAST_NAME, experiencia.EXPERIENCE_YEARS, FROM ((experiencia  INNER JOIN candidatos ON experiencia.CANDIDATO_ID = candidatos.ID) INNER JOIN tecnologia ON experiencia.TECNOLOGIA_ID = tecnologia.ID) WHERE tecnologia.name like ?]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute query
+[2022-03-0422:43:33] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0422:43:33] [ ERROR] [GlobalExceptionHandler:20] could not execute query; SQL [SELECT  tecnologia.NAME, candidatos.NAME, candidatos.LAST_NAME, experiencia.EXPERIENCE_YEARS, FROM ((experiencia  INNER JOIN candidatos ON experiencia.CANDIDATO_ID = candidatos.ID) INNER JOIN tecnologia ON experiencia.TECNOLOGIA_ID = tecnologia.ID) WHERE tecnologia.name like ?]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute query
+[2022-03-0422:54:34] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0422:57:57] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0422:59:46] [ DEBUG] [Logs experiencia:49] Modificando experiencia
+[2022-03-0423:00:57] [ DEBUG] [Logs experiencia:49] Modificando experiencia
+[2022-03-0423:00:57] [ ERROR] [GlobalExceptionHandler:20] Unable to find com.mobydigital.model.entities.Candidate with id 0; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.mobydigital.model.entities.Candidate with id 0
+[2022-03-0423:01:29] [ DEBUG] [Logs experiencia:49] Modificando experiencia
+[2022-03-0423:01:29] [ ERROR] [GlobalExceptionHandler:20] Unable to find com.mobydigital.model.entities.Candidate with id 0; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.mobydigital.model.entities.Candidate with id 0
+[2022-03-0423:01:57] [ DEBUG] [Logs experiencia:49] Modificando experiencia
+[2022-03-0423:03:27] [ DEBUG] [logs Tecnologías:40] Consultando tecnología existente
+[2022-03-0423:04:14] [ ERROR] [GlobalExceptionHandler:20] No class com.mobydigital.model.entities.Technology entity with id 211 exists!
+[2022-03-0423:04:40] [ ERROR] [GlobalExceptionHandler:20] No class com.mobydigital.model.entities.Technology entity with id 210 exists!
+[2022-03-0423:05:20] [ DEBUG] [logs Tecnologías:34] Tecnología agregada
+[2022-03-0423:06:02] [ DEBUG] [logs Tecnologías:34] Tecnología agregada
+[2022-03-0423:06:27] [ DEBUG] [logs Tecnologías:49] Se editó la tecnología
+[2022-03-0501:01:24] [ DEBUG] [Logueos:35] Registrando un candidato nuevo
+[2022-03-0501:02:48] [ DEBUG] [Logueos:35] Registrando un candidato nuevo
+[2022-03-0501:08:14] [ ERROR] [GlobalExceptionHandler:20] JSON parse error: Cannot deserialize value of type `java.util.Date` from String "Mar 5, 2022, 1:08:14 AM": not a valid representation (error: Failed to parse Date value 'Mar 5, 2022, 1:08:14 AM': Cannot parse date "Mar 5, 2022, 1:08:14 AM": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSX", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd")); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "Mar 5, 2022, 1:08:14 AM": not a valid representation (error: Failed to parse Date value 'Mar 5, 2022, 1:08:14 AM': Cannot parse date "Mar 5, 2022, 1:08:14 AM": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSX", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: (PushbackInputStream); line: 1, column: 96] (through reference chain: com.mobydigital.model.entities.Candidate["birthDate"])
+[2022-03-0501:09:09] [ ERROR] [GlobalExceptionHandler:20] Required request body is missing: public org.springframework.http.ResponseEntity<com.mobydigital.model.entities.Candidate> com.mobydigital.controller.CandidateController.addCandidate(com.mobydigital.model.entities.Candidate)
+[2022-03-0501:12:12] [ ERROR] [GlobalExceptionHandler:20] JSON parse error: Cannot deserialize value of type `java.util.Date` from String "Mar 5, 2022, 1:12:11 AM": not a valid representation (error: Failed to parse Date value 'Mar 5, 2022, 1:12:11 AM': Cannot parse date "Mar 5, 2022, 1:12:11 AM": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSX", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd")); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "Mar 5, 2022, 1:12:11 AM": not a valid representation (error: Failed to parse Date value 'Mar 5, 2022, 1:12:11 AM': Cannot parse date "Mar 5, 2022, 1:12:11 AM": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSX", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: (PushbackInputStream); line: 1, column: 96] (through reference chain: com.mobydigital.model.entities.Candidate["birthDate"])
+[2022-03-0501:13:07] [ DEBUG] [Logueos:35] Registrando un candidato nuevo
+[2022-03-0501:14:04] [ DEBUG] [Logueos:35] Registrando un candidato nuevo
+[2022-03-0501:14:11] [ INFO ] [Logueos:42] Consultando candidato existente
+[2022-03-0501:14:14] [ DEBUG] [logs Tecnologías:40] Consultando tecnología existente
+[2022-03-0501:14:17] [ DEBUG] [Logs experiencia:41] Consultando experiencia
+[2022-03-0501:14:42] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0501:14:47] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología

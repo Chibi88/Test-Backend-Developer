@@ -7,7 +7,7 @@ import com.mobydigital.model.views.CandidateDTO;
 
 public interface ICandidateService {
 
-    void createCandidate(Candidate candidate);
+    Candidate createCandidate(Candidate candidate);
     CandidateDTO readCandidate(Long id) throws CandidateNotFoundException;
     void updateCandidate(CandidateDTO candidateDTO);
     void deleteCandidate(Long id);

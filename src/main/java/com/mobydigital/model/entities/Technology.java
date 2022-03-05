@@ -1,7 +1,10 @@
 package com.mobydigital.model.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
@@ -18,10 +21,10 @@ import java.util.Set;
 
 @Entity
 @Table(name = "tecnologia")
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
+@Getter @Setter @ToString
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class Technology {
 

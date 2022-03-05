@@ -1,14 +1,13 @@
 package com.mobydigital.model.views;
 
 import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import java.io.Serializable;
 
 
-@Getter
-@Setter
+@Data
 @Builder
+
 public class ExperienceDTO implements Serializable {
 
     private Long id;

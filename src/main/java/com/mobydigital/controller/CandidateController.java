@@ -34,6 +34,7 @@ public class CandidateController {
         candidateService.createCandidate(candidate);
         logger.debug("Registrando un candidato nuevo");
         return new ResponseEntity<>(HttpStatus.CREATED);
+
     }
 
     @GetMapping("/{id}")

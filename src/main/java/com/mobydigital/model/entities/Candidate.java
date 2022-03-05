@@ -1,7 +1,10 @@
 package com.mobydigital.model.entities;
 
 import com.mobydigital.model.enums.IdType;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import javax.persistence.Entity;
@@ -19,6 +22,9 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 @ToString
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class Candidate {
 
@@ -44,6 +50,5 @@ public class Candidate {
 
     @NotNull (message = "Ingresar fecha de nacimiento")
     private Date birthDate;
-
 
 }

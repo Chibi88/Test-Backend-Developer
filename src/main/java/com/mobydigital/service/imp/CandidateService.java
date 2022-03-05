@@ -24,9 +24,9 @@ public class CandidateService implements ICandidateService {
     ObjectMapper mapper;
 
     @Override
-    public void createCandidate(Candidate candidate){
+    public Candidate createCandidate(Candidate candidate){
 
-       candidateRepository.save(candidate);
+       return candidateRepository.save(candidate);
     }
 
     @Override
@@ -35,7 +35,7 @@ public class CandidateService implements ICandidateService {
 
         Optional<Candidate> found = candidateRepository.findById(id);
         if(found.isPresent())
-            return mapper.convertValue(found, CandidateDTO.class);
+            return buildCandidateDTO(found.get());
         else
             throw new CandidateNotFoundException("Candidato no encontrado");
     }
@@ -56,5 +56,17 @@ public class CandidateService implements ICandidateService {
         candidateRepository.deleteById(id);
 
     }
+
+    private CandidateDTO buildCandidateDTO(Candidate candidate){
+        return CandidateDTO.builder()
+                .id(candidate.getId())
+                .name(candidate.getName())
+                .lastName(candidate.getLastName())
+                .idType(candidate.getIdType())
+                .idNumber(candidate.getIdNumber())
+                .birthDate(candidate.getBirthDate())
+                .build();
+    }
+
 
 }
