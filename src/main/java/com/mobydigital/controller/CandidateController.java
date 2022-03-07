@@ -2,7 +2,6 @@ package com.mobydigital.controller;
 
 import com.mobydigital.model.entities.Candidate;
 import com.mobydigital.model.views.CandidateDTO;
-import com.mobydigital.model.views.ExperienceDTO;
 import com.mobydigital.service.ICandidateService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @RestController
 @RequestMapping("/candidates")
@@ -38,7 +36,7 @@ public class CandidateController {
     }
 
     @GetMapping("/{id}")
-    public CandidateDTO getCandidate(@PathVariable Long id) throws Exception {
+    public CandidateDTO getCandidate(@PathVariable Long id){
         logger.info("Consultando candidato existente");
         return candidateService.readCandidate(id);
     }
@@ -65,11 +63,5 @@ public class CandidateController {
         response = ResponseEntity.status(HttpStatus.OK).body("Eliminado");
         return response;
     }
-
-    //@GetMapping(value = "/candidateExperienceList/{Technology}")
-    //public ResponseEntity<List<ExperienceDTO>> candidateExperienceList(@PathVariable String technologyName){
-    //    return new ResponseEntity<>(candidateService.getExperienceByTechnology(technologyName), HttpStatus.OK);
-    //}
-
 
 }

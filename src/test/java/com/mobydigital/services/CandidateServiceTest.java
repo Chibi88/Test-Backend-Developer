@@ -1,6 +1,5 @@
 package com.mobydigital.services;
 
-
 import com.mobydigital.exception.CandidateNotFoundException;
 import com.mobydigital.model.views.CandidateDTO;
 import com.mobydigital.repository.ICandidateRepository;
@@ -30,20 +29,9 @@ class CandidateServiceTest {
     @WithMockUser
     void readCandidateTest() throws CandidateNotFoundException {
 
-
        when(candidateRepository.findById(getCandidateDTO().getId())).thenReturn(Optional.of(getCandidate()));
-
        CandidateDTO candidate = candidateService.readCandidate(getCandidateDTO().getId());
-
-        assertEquals(getCandidateDTO().toString(), candidate.toString());
+       assertEquals(getCandidateDTO().toString(), candidate.toString());
 
     }
-
-    //createCandidate
-    //readCandidate
-    //updateCandidate
-    //deleteCandidate
-
-
-
 }

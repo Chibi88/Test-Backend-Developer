@@ -51,39 +51,4 @@ public class TestEntityFactory {
                 .build();
     }
 
-    //public static Technology getTechnology(){
-    //    return Technology.builder()
-    //            .id(ID_TECHNOLOGY)
-    //            .name(TECH_NAME)
-    //            .version(TECH_VERSION)
-    //            .build();
-    //}
-
-    //public static TechnologyDTO getTechnologyDTO(){
-    //    return TechnologyDTO.builder()
-    //            .id(ID_TECHNOLOGY)
-    //            .name(TECH_NAME)
-    //            .version(TECH_VERSION)
-    //            .build();
-    //}
-
-    //public static Experience getExperience(){
-    //    return Experience.builder()
-    //            .id(ID_EXPERIENCE)
-    //            .experienceYears(3)
-    //            .candidate(getCandidate())
-    //            .technology(getTechnology())
-    //            .build();
-    //}
-
-    // public static ExperienceDTO getExperienceDTO(){
-    //   return ExperienceDTO.builder()
-    //         .id(ID_EXPERIENCE)
-    //       .experienceYears(3)
-    //     .candidate(getCandidateDTO())
-    //   .technology(getTechnologyDTO())
-    // .build();
-    // }
-
-
 }

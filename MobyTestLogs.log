@@ -96,3 +96,38 @@
 [2022-03-0501:14:17] [ DEBUG] [Logs experiencia:41] Consultando experiencia
 [2022-03-0501:14:42] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
 [2022-03-0501:14:47] [ DEBUG] [Logs experiencia:68] Consultando candidatos por tecnología
+[2022-03-0700:29:07] [ DEBUG] [Logueos:33] Registrando un candidato nuevo
+[2022-03-0700:29:26] [ DEBUG] [Logueos:33] Registrando un candidato nuevo
+[2022-03-0700:29:49] [ INFO ] [Logueos:40] Consultando candidato existente
+[2022-03-0700:30:02] [ INFO ] [Logueos:40] Consultando candidato existente
+[2022-03-0700:30:18] [ DEBUG] [logs Tecnologías:34] Tecnología agregada
+[2022-03-0700:30:34] [ INFO ] [Logueos:40] Consultando candidato existente
+[2022-03-0700:30:34] [ ERROR] [GlobalExceptionHandler:20] Candidato no encontrado
+[2022-03-0700:34:09] [ INFO ] [Logueos:40] Consultando candidato existente
+[2022-03-0700:34:09] [ ERROR] [GlobalExceptionHandler:20] Candidato no encontrado
+[2022-03-0700:34:19] [ INFO ] [Logueos:40] Consultando candidato existente
+[2022-03-0700:34:38] [ DEBUG] [Logueos:61] Eliminando candidato..
+[2022-03-0700:34:46] [ DEBUG] [Logueos:61] Eliminando candidato..
+[2022-03-0700:34:46] [ ERROR] [GlobalExceptionHandler:20] No class com.mobydigital.model.entities.Candidate entity with id 258 exists!
+[2022-03-0700:35:54] [ DEBUG] [Logueos:61] Eliminando candidato..
+[2022-03-0700:35:54] [ ERROR] [GlobalExceptionHandler:20] No class com.mobydigital.model.entities.Candidate entity with id 258 exists!
+[2022-03-0700:36:00] [ DEBUG] [Logueos:61] Eliminando candidato..
+[2022-03-0700:36:00] [ ERROR] [GlobalExceptionHandler:20] No class com.mobydigital.model.entities.Candidate entity with id 258 exists!
+[2022-03-0701:04:44] [ DEBUG] [Logueos:33] Registrando un candidato nuevo
+[2022-03-0701:05:08] [ DEBUG] [Logueos:33] Registrando un candidato nuevo
+[2022-03-0701:05:10] [ DEBUG] [Logueos:33] Registrando un candidato nuevo
+[2022-03-0701:05:40] [ DEBUG] [Logueos:61] Eliminando candidato..
+[2022-03-0701:06:13] [ DEBUG] [Logueos:61] Eliminando candidato..
+[2022-03-0701:06:13] [ ERROR] [GlobalExceptionHandler:20] No class com.mobydigital.model.entities.Candidate entity with id 262 exists!
+[2022-03-0701:07:45] [ DEBUG] [Logueos:33] Registrando un candidato nuevo
+[2022-03-0701:08:10] [ DEBUG] [Logueos:61] Eliminando candidato..
+[2022-03-0701:08:10] [ ERROR] [GlobalExceptionHandler:20] No class com.mobydigital.model.entities.Candidate entity with id 262 exists!
+[2022-03-0701:08:28] [ DEBUG] [Logueos:61] Eliminando candidato..
+[2022-03-0701:14:42] [ INFO ] [Logueos:40] Consultando candidato existente
+[2022-03-0701:14:42] [ ERROR] [GlobalExceptionHandler:20] Candidato no encontrado
+[2022-03-0701:15:44] [ INFO ] [Logueos:40] Consultando candidato existente
+[2022-03-0701:19:09] [ DEBUG] [Logueos:33] Registrando un candidato nuevo
+[2022-03-0701:19:14] [ INFO ] [Logueos:40] Consultando candidato existente
+[2022-03-0701:19:14] [ ERROR] [GlobalExceptionHandler:20] Candidato no encontrado
+[2022-03-0701:19:18] [ INFO ] [Logueos:40] Consultando candidato existente
+[2022-03-0701:19:23] [ DEBUG] [logs Tecnologías:34] Tecnología agregada
